@@ -1,4 +1,4 @@
-# file_converter_front_end
+# File Converter Front-end Application
 
 > The front end application for a file converter application. It is written VueJS. It will connect to AWS API endpoints, which trigger an AWS Lambda function for the file conversion, as well as any file persistane needs.
 
