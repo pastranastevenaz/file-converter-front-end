@@ -7,6 +7,7 @@ import documents from './containers/Documents'
 import images from './containers/Images'
 import movies from './containers/Movies'
 import sounds from './containers/Sounds'
+import projects from './containers/Projects'
 
 // The routes
 const routes = [
@@ -14,7 +15,8 @@ const routes = [
   {path: '/images', component: images },
   {path: '/movies', component: movies},
   {path: '/documents', component: documents},
-  {path: '/sounds', component: sounds}
+  {path: '/sounds', component: sounds},
+  {path: '/projects', component: projects}
 ]
 
 // Export the router
