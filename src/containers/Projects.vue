@@ -41,6 +41,9 @@ import axios from 'axios'
     },
     methods: {
       loadProjects: function(){
+        // Would not work with this. The scope was messed up.
+        // Had to assign this to self variable in order for
+        // HTTP request to assign to post variable
         var self = this;
         axios.get('https://jsonplaceholder.typicode.com/posts')
           .then(function (response) {
