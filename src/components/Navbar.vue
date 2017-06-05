@@ -1,26 +1,26 @@
 <template lang="html">
   <nav>
         <ul>
-            <li><a href="#">File Converter</a></li>
+            <li><a href="#"><p>File Converter</p></a></li>
             <li id="space"><li>
             <li>
               <router-link class="nav-item is-tab" to="/images">
-                <i class="fa fa-file-image-o"></i> Images
+                <i class="fa fa-file-image-o"></i> <p>Images</p>
               </router-link>
             </li>
             <li>
               <router-link class="nav-item is-tab" to="/movies">
-                <i class="fa fa-file-movie-o"></i> Movies
+                <i class="fa fa-file-movie-o"></i> <p>Movies</p>
               </router-link>
             </li>
             <li>
               <router-link class="nav-item is-tab" to="/documents">
-                <i class="fa fa-file-word-o"></i> Documents
+                <i class="fa fa-file-word-o"></i> <p>Documents</p>
               </router-link>
             </li>
             <li>
               <router-link class="nav-item is-tab" to="/sounds">
-                <i class="fa fa-file-sound-o"></i> Sounds
+                <i class="fa fa-file-sound-o"></i> <p>Sounds</p>
               </router-link>
             </li>
             <!-- <li><a href="#">Web Design</a> -->
@@ -60,48 +60,25 @@ export default {
 </script>
 
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);*/
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+p{
+  font-family: 'Comfortaa', cursive;
+  display: inline-block;
+}
 #space{
   width: 7em;
 }
 body {
 	background: #fff;
-	font-size:22px;
-	line-height: 32px;
 	color: #ffffff;
-	word-wrap:break-word !important;
-	font-family: 'Open Sans', sans-serif;
 	}
-
-h1 {
-  display: inline-block;
-	font-size: 60px;
-	text-align: center;
-	color: #FFF;
-}
-
-h3 {
-	font-size: 30px;
-	text-align: center;
-	color: #FFF;
-}
-
-h3 a {
-	color: #FFF;
-}
 
 router-link {
 	color: #FFF;
   margin-right: 1em;
 }
-
-h1 {
-	margin-top: 100px;
-	text-align:center;
-	font-size:60px;
-	font-family: 'Bree Serif', 'serif';
-	}
 
 #container {
 	margin: 0 auto;
@@ -109,6 +86,7 @@ h1 {
 
 p {
 	text-align: center;
+  font-size: .8em;
 }
 
 nav {
@@ -133,7 +111,7 @@ nav a {
 	padding:0 10px;
 	color:#FFF;
 	font-size:20px;
-	line-height: 60px;
+	line-height: 16px;
 	text-decoration:none;
 }
 

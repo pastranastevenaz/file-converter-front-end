@@ -1,10 +1,13 @@
 <template lang="html">
   <div id="documents">
     Documents container info goes here
+    <uploader></uploader>
   </div>
 </template>
 
 <script>
+import uploader from '../components/Uploader'
+
   export default{
     name: 'documents'
   }

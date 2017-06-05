@@ -53,12 +53,17 @@ import axios from 'axios'
           .catch(function (error) {
             console.log(error);
           });
-        // axios.get('https://jsonplaceholder.typicode.com/posts').then((
-        //   response)=>{
-        //     this.posts=response.data
-        //   },(err)=>{
-        //     console.log(err)
-        //   })
+          //
+          // COULD ALSO JUST USE ARROW FUNCTIONS
+          //
+          // axios.get('/api/sample')
+          //     .then((response) => {
+          //            console.log(response.data);
+          //            this.posts = response.data;
+          //        })
+          //        .catch((err) => {
+          //            console.log(err);
+          //        });
       }
     },
     mounted(){

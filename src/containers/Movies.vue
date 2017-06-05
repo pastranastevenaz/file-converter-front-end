@@ -1,10 +1,12 @@
 <template lang="html">
   <div id="movies">
-    Movies container info goes here
+    Movies content goes here
+    <uploader></uploader>
   </div>
 </template>
 
 <script>
+import uploader from '../components/Uploader'
   export default{
     name: 'movies'
   }

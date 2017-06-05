@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import navbar from './components/Navbar'
 import router from './router'
+import Uploader from './components/Uploader'
+
+// GLOBAL REGISTRY
+Vue.component('uploader', Uploader);
+
 /* eslint-disable no-new */
 new Vue({
   template: `
