@@ -22,8 +22,8 @@ npm run build --report
 
 > The following open source libraries were utilized in the development of this web application
 
-VueJS | Front-end Javascript library
+VueJS           | Front-end Javascript library
 
-Axios | HTTP Request JavaSCript Library
+Axios           | HTTP Request JavaSCript Library
 
-Fine Uploader | JavaScript file uploading library
+Fine Uploader   | JavaScript file uploading library
