@@ -18,4 +18,12 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Software Credit
+
+> The following open source libraries were utilized in the development of this web application
+
+VueJS | Front-end Javascript library
+
+Axios | HTTP Request JavaSCript Library
+
+Fine Uploader | JavaScript file uploading library
