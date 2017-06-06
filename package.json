@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
-    "vue": "^2.3.3"
+    "vue": "^2.3.3",
+    "fine-uploader": "5.11.5"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
