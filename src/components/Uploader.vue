@@ -1,34 +1,80 @@
 <template lang="html">
   <div class="uploader">
-    <form id="file-form" method="POST">
-      <p id="upload-file-prompt">Select a file to upload</p>
-      <label v-on:click="greet" for="file-select"  class="custom-file-upload">Choose file</label>
-      <span id="selected_filename">No file selected</span>
-      <input type="file" id="file-select" name="file" class="inputFile">
+    <!-- <form id="uploader" enctype="multipart/form-data" v-on:change="uploadFile">
+      <p id="upload-file-prompt">Select a file to upload</p> -->
+      <!-- <label v-on:click="greet" for="file-select"  class="custom-file-upload">Choose file</label> -->
+      <!-- <span id="selected_filename">No file selected</span> -->
+      <!-- <input type="file" id="file" name="file" class="inputFile"><br><br>
       <button type="submit" id="upload-button">Upload</button>
-    </form>
+    </form> -->
+
+    <div id="app">
+      <div v-if="!image">
+        <h2>Select an image</h2>
+        <input type="file" v-on:change="onFileChange">
+      </div>
+      <div v-else>
+        <img :src="image" />
+        <button v-on:click="removeImage">Remove image</button>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
-var selectedFilename;
-// = document.getElementById('selected_filename');
+import axios from 'axios'
+
+// var formData = new FormData();
+// var imageFile = document.querySelector('#file');
+//
+// axios.post('upload_file', formData, {
+//   headers: {
+//     'Content-Type': 'multipart/form-data'
+//   }
+// })
+
 export default {
   name: 'uploader',
-  methods: {
-    greet: function(event){
-      var thefile = document.getElementById('file-select');
-                alert(thefile.value);
-      // document.getElementById('file-select').onChange = function(){
-      //   alert('Selected File: ' + this.value);
-      
+  data: function(){
+    return{
+      image: ''
     }
+  },
+  methods: {
+    onFileChange(e) {
+      var files = e.target.files || e.dataTransfer.files;
+      if (!files.length)
+        return;
+      this.createImage(files[0]);
+    },
+    createImage(file) {
+      var image = new Image();
+      var reader = new FileReader();
+      var that = this;
+
+      reader.onload = (e) => {
+        that.image = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    },
+    removeImage: function (e) {
+      this.image = '';
+    }
+  }
 }
-}
+
 </script>
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Comfortaa);
+
+img {
+  width: 30%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+}
 
 .uploader{
   text-align: center;
@@ -73,17 +119,18 @@ export default {
   margin-right: 2em;
 }
 input[type="file"]{
-  display: none;
+  /*display: none;*/
+  /*visibility: hidden;*/
 }
 
 #upload-button{
   font-family: 'Comfortaa', cursive;
   border-style: none;
   background-color: #888;
-  padding: 8px 16px;
+  padding: 12px 16px;
   cursor: pointer;
   color: #fff;
-  width: 8em;
+  width: 70%;
   font-size: 1.01em;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
