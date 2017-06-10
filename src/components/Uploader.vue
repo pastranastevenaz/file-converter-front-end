@@ -55,6 +55,7 @@ export default {
 
       reader.onload = (e) => {
         that.image = e.target.result;
+        console.log(that.image.data);
       };
       reader.readAsDataURL(file);
     },
